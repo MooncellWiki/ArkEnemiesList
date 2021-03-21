@@ -66,11 +66,6 @@
     "StarHeartHunt <starheart233@gmail.com> (https://github.com/StarHeartHunt)"
   ],
   "homepage": "https://github.com/MooncellWiki/ArkEnemiesList#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "license": "MIT",
   "config": {
     "commitizen": {
