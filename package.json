@@ -1,0 +1,80 @@
+{
+  "name": "ArkEnemiesList",
+  "version": "0.1.0",
+  "private": true,
+  "author": "StarHeartHunt <starheart233@gmail.com> (https://github.com/StarHeartHunt)",
+  "scripts": {
+    "postinstall": "husky install",
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build --mode production",
+    "bm": "vue-cli-service build --modern --mode production",
+    "lint": "vue-cli-service lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "md5": "^2.3.0",
+    "vue": "^2.6.11",
+    "vuetify": "^2.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "6.0.0",
+    "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^5.1.3",
+    "prettier": "2.2.1",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.2.2",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 0.05% in my stats",
+    "> 0.5% in CN",
+    "last 5 versions",
+    "since 2013",
+    "defaults"
+  ],
+  "bugs": {
+    "url": "https://github.com/MooncellWiki/ArkEnemiesList/issues"
+  },
+  "contributors": [
+    "StarHeartHunt <starheart233@gmail.com> (https://github.com/StarHeartHunt)"
+  ],
+  "homepage": "https://github.com/MooncellWiki/ArkEnemiesList#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
