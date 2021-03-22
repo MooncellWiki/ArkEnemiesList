@@ -1,11 +1,11 @@
 <template>
-  <v-row align="center" justify="center" class="mb-2" no-gutters>
+  <v-row align="center" no-gutters>
     <v-col cols="1">
       {{ groupName }}
     </v-col>
     <v-btn class="mx-1" @click="all()">全选</v-btn>
     <v-btn class="mx-1" @click="none()">清除</v-btn>
-    <v-col class="mx-2">
+    <v-col class="mx-2" md="auto">
       <v-chip-group
         active-class="primary--text"
         v-model="selectedTags"
