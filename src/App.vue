@@ -480,11 +480,6 @@ export default {
         text: '法术抗性降序',
       },
     ],
-    levels2CN: {
-      NORMAL: '普通',
-      ELITE: '精英',
-      BOSS: '领袖',
-    },
     itemsPerPageOption: [50, 100, 200, 500, -1],
     isLoading: true,
     searchText: '',
