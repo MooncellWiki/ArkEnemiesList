@@ -141,7 +141,7 @@
           class="elevation-1 my-2"
         >
           <template v-slot:item.icon="{ item }">
-            <a :href="`/w/${item.name}`">
+            <a :href="`/w/${item.enemyLink}`">
               <v-img
                 max-height="100"
                 max-width="100"
@@ -163,7 +163,7 @@
             </a>
           </template>
           <template v-slot:item.name="{ item }">
-            <a :href="`/w/${item.name}`" style="text-decoration: none">
+            <a :href="`/w/${item.enemyLink}`" style="text-decoration: none">
               {{ item.name }}
             </a>
           </template>
@@ -198,7 +198,7 @@
           <a
             v-for="(item, index) in currPageData"
             :key="index"
-            :href="`/w/${item.name}`"
+            :href="`/w/${item.enemyLink}`"
           >
             <v-img
               max-height="65"
