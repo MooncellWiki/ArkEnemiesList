@@ -10,7 +10,7 @@
         <v-expansion-panel-header>
           <center>筛选</center>
         </v-expansion-panel-header>
-        <v-expansion-panel-content>
+        <v-expansion-panel-content :eager="true">
           <v-divider></v-divider>
           <FilterGroup
             :selections="levels"
@@ -41,7 +41,7 @@
         <v-expansion-panel-header>
           <center>四维筛选</center>
         </v-expansion-panel-header>
-        <v-expansion-panel-content>
+        <v-expansion-panel-content :eager="true">
           <v-divider></v-divider>
           <FilterGroup
             :selections="dimensionRates"
