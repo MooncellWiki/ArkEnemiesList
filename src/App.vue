@@ -167,6 +167,9 @@
               {{ item.name }}
             </a>
           </template>
+          <template v-slot:item.ability="{ item }">
+            <span v-html="item.ability"></span>
+          </template>
         </v-data-table>
         <div class="text-center">
           <v-pagination v-model="page" :length="pageCount"></v-pagination>
