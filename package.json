@@ -9,7 +9,7 @@
     "build": "vue-cli-service build --mode production",
     "bm": "vue-cli-service build --modern --mode production",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write ."
+    "lint:fix": "prettier --write ."
   },
   "dependencies": {
     "axios": "^0.21.1",
