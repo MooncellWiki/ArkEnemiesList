@@ -2,19 +2,12 @@
   <span>
     <span v-for="(message, index) in messages" :key="index">
       <span v-if="message.type == '#text'">{{ message.data }}</span>
-      <v-tooltip v-if="message.type != '#text'" top>
-        <template v-slot:activator="{ on, attrs }">
-          <span
-            v-bind="attrs"
-            v-on="on"
-            style="text-decoration: underline #222"
-            >{{ message.data.children[0].innerText }}</span
-          >
-        </template>
-        <span v-bind="attrs" v-on="on">{{
+      <div v-if="message.type != '#text'" class="tooltip">
+        {{ message.data.children[0].innerText }}
+        <span class="tooltiptext">{{
           message.data.children[1].innerText
         }}</span>
-      </v-tooltip>
+      </div>
     </span>
   </span>
 </template>
@@ -43,3 +36,32 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
