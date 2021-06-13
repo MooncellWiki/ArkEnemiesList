@@ -140,7 +140,7 @@
           @page-count="pageCount = $event"
           class="elevation-1 my-2"
         >
-          <template v-slot:item.icon="{ item }">
+          <template v-slot:[`item.icon`]="{ item }">
             <a :href="`/w/${item.enemyLink}`">
               <v-img
                 max-height="100"
@@ -162,12 +162,12 @@
               </v-img>
             </a>
           </template>
-          <template v-slot:item.name="{ item }">
+          <template v-slot:[`item.name`]="{ item }">
             <a :href="`/w/${item.enemyLink}`" style="text-decoration: none">
               {{ item.name }}
             </a>
           </template>
-          <template v-slot:item.ability="{ item }">
+          <template v-slot:[`item.ability`]="{ item }">
             <span v-html="item.ability"></span>
           </template>
         </v-data-table>
