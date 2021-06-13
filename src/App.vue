@@ -168,7 +168,7 @@
             </a>
           </template>
           <template v-slot:[`item.ability`]="{ item }">
-            <span v-html="item.ability"></span>
+            <ability-text :text="item.ability"></ability-text>
           </template>
         </v-data-table>
         <div class="text-center">
@@ -234,6 +234,7 @@
 import axios from 'axios'
 
 import FilterGroup from './components/FilterGroup'
+import AbilityText from './components/AbilityText.vue'
 
 import path from './utils/path'
 import filter from './utils/filter'
@@ -244,6 +245,7 @@ export default {
 
   components: {
     FilterGroup,
+    AbilityText,
   },
 
   methods: {
