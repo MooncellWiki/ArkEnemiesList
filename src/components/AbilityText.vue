@@ -46,7 +46,7 @@ export default {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 240px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -58,7 +58,7 @@ export default {
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -120px;
 }
 
 .tooltip:hover .tooltiptext {

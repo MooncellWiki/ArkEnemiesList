@@ -138,6 +138,7 @@
           :items-per-page="itemsPerPage"
           hide-default-footer
           @page-count="pageCount = $event"
+          item-key="sortId"
           class="elevation-1 my-2"
         >
           <template v-slot:[`item.icon`]="{ item }">
