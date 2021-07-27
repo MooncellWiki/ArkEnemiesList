@@ -234,7 +234,7 @@
 <script>
 import axios from 'axios'
 
-import FilterGroup from './components/FilterGroup'
+import FilterGroup from './components/FilterGroup.vue'
 import AbilityText from './components/AbilityText.vue'
 
 import path from './utils/path'
