@@ -7,7 +7,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/index.php': {
-        target: 'http://prts.wiki',
+        target: 'https://prts.wiki',
         changeOrigin: true,
       },
     },
