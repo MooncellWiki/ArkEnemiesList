@@ -11,8 +11,5 @@ module.exports = {
         changeOrigin: true,
       },
     },
-    host: '0.0.0.0',
-    port: 3008,
-    public: '0.0.0.0:3008',
   },
 }
