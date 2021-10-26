@@ -12,7 +12,7 @@
     "lint:fix": "prettier --write ."
   },
   "dependencies": {
-    "axios": "^0.23.0",
+    "axios": "^0.24.0",
     "core-js": "^3.19.0",
     "md5": "^2.3.0",
     "vue": "^2.6.11",
