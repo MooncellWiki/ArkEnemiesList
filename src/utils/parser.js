@@ -21,8 +21,8 @@ export default {
   },
 
   parseToSegment(text) {
-    let children = this.parseToDOM(text).getElementsByTagName('body')[0]
-      .childNodes
+    let children =
+      this.parseToDOM(text).getElementsByTagName('body')[0].childNodes
     return children
   },
 }
