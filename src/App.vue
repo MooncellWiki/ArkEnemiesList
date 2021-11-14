@@ -193,6 +193,22 @@
       </div>
       <div v-if="isSimplified">
         <div class="text-center">
+          <v-chip-group
+            mandatory
+            active-class="primary--text"
+            v-model="itemsPerPage"
+            v-if="isDesktop"
+            column
+          >
+            <v-chip
+              v-for="(option, index) in itemsPerPageOption"
+              :key="index"
+              :value="option"
+              label
+            >
+              {{ option == -1 ? '全部' : option }}
+            </v-chip>
+          </v-chip-group>
           <v-pagination
             v-model="currPage"
             :length="filteredDataSplited.length"
@@ -342,6 +358,7 @@ export default {
   },
 
   mounted: function () {
+    this.isDesktop = window.innerWidth > 768
     this.isSimplified = document.body.className.indexOf('skin-minerva') > -1
   },
 
