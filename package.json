@@ -1,5 +1,5 @@
 {
-  "name": "ArkEnemiesList",
+  "name": "ark-enemies-list",
   "version": "0.1.0",
   "private": true,
   "author": "StarHeartHunt <starheart233@gmail.com> (https://github.com/StarHeartHunt)",
@@ -7,6 +7,7 @@
     "postinstall": "husky install",
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
+    "build:dev": "vue-cli-service build --mode development",
     "bm": "vue-cli-service build --modern --mode production",
     "lint": "vue-cli-service lint",
     "lint:fix": "prettier --write ."
