@@ -39,8 +39,25 @@ jobs:
           yarn build:dev
 
       - uses: amondnet/vercel-action@v20
+        id: vercel-action-staging
+        if: github.event_name == 'pull_request_target'
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: example/angular/dist/angular
+          alias-domains: |
+            staging.ark-enemies-list.vercel.app
+            pr-{{PR_NUMBER}}.ark-enemies-list.vercel.app
+
+      - uses: amondnet/vercel-action@v20
+        id: vercel-action-production
+        if: github.event_name == 'push'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: example/angular/dist/angular
+          vercel-args: '--prod '
