@@ -5,14 +5,17 @@
       <span
         v-if="
           message.type === 'SPAN' &&
-          message.data.classList.indexOf('mc-tooltips') === -1
+          message.data.className === '' &&
+          message.data.className.indexOf('mc-tooltips') === -1
         "
-        >{{ message.data }}</span
       >
+        <span v-html="message.data.outerHTML"></span>
+      </span>
       <div
         v-if="
           message.type === 'SPAN' &&
-          message.data.classList.indexOf('mc-tooltips') !== -1
+          message.data.className !== '' &&
+          message.data.className.indexOf('mc-tooltips') !== -1
         "
         class="tooltip"
       >
@@ -45,6 +48,7 @@ export default {
         type: item.nodeName,
         data: item.nodeName == '#text' ? item.data : item,
       })
+      console.log(item)
     })
     console.log(this.messages)
   },
