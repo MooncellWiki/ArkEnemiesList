@@ -1,8 +1,21 @@
 <template>
   <span>
     <span v-for="(message, index) in messages" :key="index">
-      <span v-if="message.type == '#text'">{{ message.data }}</span>
-      <div v-if="message.type != '#text'" class="tooltip">
+      <span v-if="message.type === '#text'">{{ message.data }}</span>
+      <span
+        v-if="
+          message.type === 'SPAN' &&
+          message.data.classList.indexOf('mc-tooltips') === -1
+        "
+        >{{ message.data }}</span
+      >
+      <div
+        v-if="
+          message.type === 'SPAN' &&
+          message.data.classList.indexOf('mc-tooltips') !== -1
+        "
+        class="tooltip"
+      >
         {{ message.data.children[0].innerText }}
         <span class="tooltiptext">{{
           message.data.children[1].innerText
@@ -33,6 +46,7 @@ export default {
         data: item.nodeName == '#text' ? item.data : item,
       })
     })
+    console.log(this.messages)
   },
 }
 </script>
