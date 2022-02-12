@@ -38,7 +38,7 @@ jobs:
       - name: Install and build
         run: |
           yarn install
-          yarn build:dev
+          yarn bm
 
       - uses: amondnet/vercel-action@v20
         id: vercel-action-staging
