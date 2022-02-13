@@ -54,7 +54,6 @@
     "rules": {}
   },
   "browserslist": [
-    "> 0.05% in my stats",
     "> 0.5% in CN",
     "last 5 versions",
     "since 2013",
