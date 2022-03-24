@@ -350,7 +350,6 @@ export default {
       .then((res) => {
         this.enemyData = res.data
         this.isLoading = false
-        console.log(this.enemyData)
       })
       .catch(function (error) {
         console.log(error)

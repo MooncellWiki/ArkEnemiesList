@@ -48,9 +48,7 @@ export default {
         type: item.nodeName,
         data: item.nodeName == '#text' ? item.data : item,
       })
-      console.log(item)
     })
-    console.log(this.messages)
   },
 }
 </script>
