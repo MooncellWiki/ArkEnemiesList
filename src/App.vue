@@ -346,7 +346,7 @@ export default {
 
   created: function () {
     axios
-      .get(process.env.VUE_APP_DATA_URL)
+      .get(window.location.origin + process.env.VUE_APP_DATA_URL)
       .then((res) => {
         this.enemyData = res.data
         this.isLoading = false
