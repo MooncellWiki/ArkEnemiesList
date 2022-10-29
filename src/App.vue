@@ -377,7 +377,9 @@ export default {
     },
 
     filteredDataSplited() {
-      return pagination.chunk(this.filteredData, this.itemsPerPage)
+      return this.itemsPerPage != -1
+        ? pagination.chunk(this.filteredData, this.itemsPerPage)
+        : this.filteredData
     },
 
     filteredData() {
