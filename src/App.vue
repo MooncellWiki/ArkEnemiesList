@@ -238,7 +238,6 @@
 .enemy-avatar {
   max-width: 65px;
   max-height: 65px;
-  margin: 2px 2px;
 }
 </style>
 
