@@ -220,20 +220,7 @@
             :key="index"
             :href="`/w/${item.enemyLink}`"
           >
-            <v-img
-              max-height="65"
-              max-width="65"
-              :src="getImagePath(item.name)"
-            >
-              <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
+            <img class="enemy-avatar" :src="getImagePath(item.name)" />
           </a>
         </v-card>
         <div class="text-center">
@@ -246,6 +233,14 @@
     </div>
   </v-app>
 </template>
+
+<style scoped>
+.enemy-avatar {
+  max-width: 65px;
+  max-height: 65px;
+  margin: 2px 2px;
+}
+</style>
 
 <script>
 import axios from 'axios'
@@ -379,7 +374,7 @@ export default {
     filteredDataSplited() {
       return this.itemsPerPage != -1
         ? pagination.chunk(this.filteredData, this.itemsPerPage)
-        : this.filteredData
+        : [this.filteredData]
     },
 
     filteredData() {
