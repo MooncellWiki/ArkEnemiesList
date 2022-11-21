@@ -1,10 +1,16 @@
 <template>
   <v-row align="center" no-gutters>
-    <v-col cols="1">
+    <v-col cols="2">
       {{ groupName }}
     </v-col>
-    <v-btn class="mx-1" @click="all()">全选</v-btn>
-    <v-btn class="mx-1" @click="none()">清除</v-btn>
+    <div
+      :class="{
+        'd-flex align-center flex-column': isMobile,
+      }"
+    >
+      <v-btn class="mx-1 my-1" @click="all()">全选</v-btn>
+      <v-btn class="mx-1 my-1" @click="none()">清除</v-btn>
+    </div>
     <v-col class="mx-2" md="auto">
       <v-chip-group
         active-class="primary--text"
@@ -44,6 +50,7 @@ export default {
 
   data() {
     return {
+      isMobile: document.body.className.indexOf('skin-minerva') > -1,
       selectedTags: [],
     }
   },
