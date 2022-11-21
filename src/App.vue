@@ -453,7 +453,7 @@ export default {
     isSimplified: null,
     page: 1,
     pageCount: 0,
-    itemsPerPage: 10,
+    itemsPerPage: 50,
     selectedSortMethod: 'sortId',
     currPage: 1,
     sortMethods: [
